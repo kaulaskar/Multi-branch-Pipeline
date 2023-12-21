@@ -18,7 +18,7 @@ pipeline {
             TERRAFORM_DESTROY = "YES" //YES or NO
             }
             when {
-                branch 'development'
+                branch 'dev'
             }
             stages {
                 stage('Perform Packer Build') {
@@ -158,7 +158,7 @@ pipeline {
             ANSIBLE_ACTION = "NO" //YES or NO
             }
             when {
-                branch 'production'
+                branch 'prod'
             }
             stages {
                 stage('Perform Packer Build') {
