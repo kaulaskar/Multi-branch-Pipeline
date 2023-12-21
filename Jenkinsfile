@@ -1,13 +1,13 @@
 //Declarative Pipeline
-def VERSION='1.0.0'
+def VERSION='1.0.0'  //global variable 
 pipeline {
-    agent none
+    agent none  //not run anywhere we have given agent to each stage 
     environment {
         PROJECT = "WELCOME TO DEVOPS B28 BATCH - Jenkins Class"
     }
     stages {
      stage('For Parallel Stages') {
-      parallel {
+      parallel {   //two stages will run parallerly
         stage('Deploy To Development') {
             agent { label 'DEV' }
             environment {
@@ -18,7 +18,7 @@ pipeline {
             TERRAFORM_DESTROY = "YES" //YES or NO
             }
             when {
-                branch 'development'
+                branch 'development' //this stage willl work onley when ther is commit in development branch
             }
             stages {
                 stage('Perform Packer Build') {
