@@ -29,3 +29,6 @@ Jenkinsfile:
 Install Multibranch Scan Webhook Trigger for running pipeline based on webhook.
 
 Disable Git Host Key Verification Configuration from Global Security.
+
+encript the username and password
+![Alt text](image.png)
